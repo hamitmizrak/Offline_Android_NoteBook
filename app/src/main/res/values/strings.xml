@@ -4,10 +4,11 @@
     <string name="homepage">Anasayfaya Hoşgeldiniz</string>
 
     <!--Button-->
-    <string name="redirect">Başka Sayfa Yönlendir</string>
+    <string name="redirect">Ana</string>
 
     <!--Notebook-->
     <string name="notebook_main_redirect">Notebook</string>
+    <string name="notebook_text_header">Note İçin Yazı Yazınız.</string>
     <string name="notebook_welcome">Notebook Sayfasına Hoşgediniz</string>
     <string name="notebook_text">Not Defteri İçin Birşeyler Yazınız ...</string>
     <string name="notebook_reset_button">Temizle</string>

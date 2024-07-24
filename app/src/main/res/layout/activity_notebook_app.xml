@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotebookApp"
+    android:background="@drawable/black_notebook"
     android:orientation="vertical"
-    android:background="@color/hm_muted"
-    >
+    tools:context=".NotebookApp">
 
     <!--Scroll-->
     <ScrollView
@@ -25,71 +24,100 @@
 
             <!--Resim-->
             <ImageView
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/notebook_app"/>
+                android:src="@drawable/notebook_app" />
+
+            <!--TextView-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/notebook_text_header"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textSize="19dp"
+                android:alpha="0.9"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/hm_white"
+                />
 
             <!--EditText-->
             <EditText
                 android:id="@+id/notebook_editText_id"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:padding="12dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="top|start"
                 android:hint="@string/notebook_text"
                 android:inputType="text"
-                android:textStyle="bold|italic"
-                android:focusable="true"
-                android:clickable="true"
-                android:gravity="top|start"
-                android:background="@color/white"
+                android:padding="12dp"
                 android:textColor="@color/black"
-                android:fontFamily="sans-serif-light"
+                android:textStyle="bold|italic"
+                android:alpha="0.8"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 />
 
+            <!--Buttonlar-->
             <RelativeLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <!--Button1(Reset) -->
-              <Button
-                  android:id="@+id/notebook_resetButton_id"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="10dp"
-                  android:layout_marginBottom="10dp"
-                  android:text="@string/notebook_reset_button"
-                  android:layout_alignParentLeft="true">
-              </Button>
+                <Button
+                    android:id="@+id/notebook_resetButton_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/notebook_reset_button"
+                    android:drawableLeft="@drawable/trash"
+                    android:backgroundTint="@color/hm_danger"
+                    android:enabled="true"
+                    android:textAllCaps="false"
+                    />
 
                 <!--Button2(Submit) -->
                 <Button
-                    android:id="@+id/notebook_submitButton"
+                    android:id="@+id/notebook_submitButton_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/notebook_resetButton_id"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:text="@string/notebook_submit_button"
-                    android:layout_alignParentLeft="true">
-                </Button>
+                    android:drawableLeft="@drawable/submit"
+                    android:backgroundTint="@color/hm_primary"
+                    android:enabled="true"
+                    android:textAllCaps="false"
+                    />
 
                 <!--Button3(Redirect) -->
                 <Button
                     android:id="@+id/notebook_resetButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/notebook_submitButton_id"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:text="@string/redirect"
-                    android:layout_alignParentRight="true">
-                </Button>
-
+                    android:drawableLeft="@drawable/redirect"
+                    android:backgroundTint="@color/hm_success"
+                    android:enabled="true"
+                    android:textAllCaps="false"
+                    />
             </RelativeLayout>
-
-
         </LinearLayout>
     </ScrollView>
-
-
-</RelativeLayout>
+</LinearLayout>
