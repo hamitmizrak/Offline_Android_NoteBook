@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/notebook"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -20,25 +21,40 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:height="100dp"
+                android:height="50dp"
                 android:text="@string/welcome"
                 android:gravity="center"
                 android:textStyle="bold|italic"
                 android:textSize="16dp"
-                android:textColor="@color/hm_warning"
-                android:background="@color/black"
+                android:alpha="0.3"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/hm_black"
+                android:background="@color/hm_white"
                 />
 
             <!--Notebook Redirect-->
+            <!--
+            android:textColor="@color/hm_primary"
+            android:textColor="@drawable/button_shadow"
+             android:background="@drawable/button_shadow"
+             android:backgroundTint="@color/black"
+             API seviyesi ve uyumluluk: Kullandığımı bazı drawable özellikleri bazı API seviyelerini desteklemiyor.
+             Minumum API seviyesinin kullandığımız drawable özelliklerini desteklediğinden emin olmalıyız.
+            -->
             <Button
                 android:id="@+id/notebook_main_redirect_id"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:background="@color/hm_primary"
-                android:textColor="@color/hm_white"
+                android:minWidth="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/notebook_main_redirect"
+                android:drawableLeft="@drawable/note"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/hm_secondary"
+                android:layout_marginLeft="10dp"
+                android:enabled="true"
+                android:textAllCaps="false"
                 />
         </LinearLayout>
     </ScrollView>

@@ -2,6 +2,7 @@ package com.hamitmizrak.todolist;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
         // ID
         buttonNotebookRedirect=findViewById(R.id.notebook_main_redirect_id);
+        // Java Tarafından Nasıl Background değiştirebilirim.
+        buttonNotebookRedirect.setBackgroundColor(Color.parseColor("#FF5722"));
+        buttonNotebookRedirect.setAlpha(0.8f);
         buttonNotebookRedirect.setOnClickListener(new View.OnClickListener() { //interface
             @Override
             public void onClick(View view) {

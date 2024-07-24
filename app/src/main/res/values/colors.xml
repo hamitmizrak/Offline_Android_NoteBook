@@ -20,5 +20,6 @@
     <color name="hm_muted">#6C757D</color>
     <color name="hm_gray">#6C757D</color>
     <color name="hm_white">#FFFFFFFF</color>
+    <color name="hm_black">#000000</color>
 </resources>
 
