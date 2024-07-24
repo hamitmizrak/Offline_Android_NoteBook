@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:height="100dp"
-        android:background="@color/black"
-        android:textColor="@color/hm_warning"
-        android:text="@string/welcome"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <!--Kodlar Buraya-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:height="100dp"
+                android:text="@string/welcome"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textSize="16dp"
+                android:textColor="@color/hm_warning"
+                android:background="@color/black"
+                />
+
+            <!--Notebook Redirect-->
+            <Button
+                android:id="@+id/notebook_main_redirect_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/hm_primary"
+                android:textColor="@color/hm_white"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/notebook_main_redirect"
+                />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,15 +1,22 @@
 package com.hamitmizrak.todolist;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    // Global Variable
+    private Button buttonNotebookRedirect;
 
     // ONCREATE(1)
     @Override
@@ -30,6 +37,43 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(this, "Anasayfaya Hoşgeldiniz", Toast.LENGTH_SHORT).show();
         String welcome=getString(R.string.welcome);
         Toast.makeText(this, welcome, Toast.LENGTH_LONG).show();
+
+        // ID
+        buttonNotebookRedirect=findViewById(R.id.notebook_main_redirect_id);
+        buttonNotebookRedirect.setOnClickListener(new View.OnClickListener() { //interface
+            @Override
+            public void onClick(View view) {
+                // Confirm AlertDialog
+                AlertDialog.Builder alertDialogNotebook= new AlertDialog.Builder(MainActivity.this);
+
+                // Yanıt Evetse
+                alertDialogNotebook.setPositiveButton("Evet", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // Yönlendirme
+                        Intent notebookIntent= new Intent(getApplicationContext(),NotebookApp.class);
+                        Toast.makeText(MainActivity.this, "NoteBook Sayfasına Yönlendirildi", Toast.LENGTH_SHORT).show();
+                        startActivity(notebookIntent);
+                    }
+                });
+
+                //Yanıt Hayırsa
+                alertDialogNotebook.setNegativeButton("Hayır", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(MainActivity.this, "Notebook sayfasına yönlendirme yapılmadı", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+                // AlertDialog Bilgileri
+                alertDialogNotebook.setTitle("Notebook Sayfası");
+                alertDialogNotebook.setMessage("Application Yönlendirmesi");
+                alertDialogNotebook.show();
+            } // AlertDialog onClick
+        }); //end Onclick buttonNotebookRedirect
+
+
     } //end onCreate
 
     // ONSTART(2)

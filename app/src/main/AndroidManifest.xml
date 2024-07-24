@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <!--İzinler-->
+    <!-- İzinler -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -21,8 +19,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodoList"
         tools:targetApi="31">
-
-        <!--Ana activity seçmek-->
+        <activity
+            android:name=".NotebookApp"
+            android:exported="false" />
+        <!-- Ana activity seçmek -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -32,6 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+    </application>
 
-    </application> <!-- application -->
-</manifest> <!-- manifest -->
+</manifest>

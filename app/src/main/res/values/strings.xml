@@ -2,4 +2,14 @@
     <string name="app_name">Tech Android Uygulaması</string>
     <string name="welcome">Merhabalar Güzel İnsanlar...</string>
     <string name="homepage">Anasayfaya Hoşgeldiniz</string>
+
+    <!--Button-->
+    <string name="redirect">Başka Sayfa Yönlendir</string>
+
+    <!--Notebook-->
+    <string name="notebook_main_redirect">Notebook</string>
+    <string name="notebook_welcome">Notebook Sayfasına Hoşgediniz</string>
+    <string name="notebook_text">Not Defteri İçin Birşeyler Yazınız ...</string>
+    <string name="notebook_reset_button">Temizle</string>
+    <string name="notebook_submit_button">Gönder</string>
 </resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotebookApp"
+    android:orientation="vertical"
+    android:background="@color/hm_muted"
+    >
+
+    <!--Scroll-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Scroll için burası Layout olmalıdır-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--UI Kodlarını Buraya yazıyoruz-->
+
+            <!--Resim-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/notebook_app"/>
+
+            <!--EditText-->
+            <EditText
+                android:id="@+id/notebook_editText_id"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="12dp"
+                android:hint="@string/notebook_text"
+                android:inputType="text"
+                android:textStyle="bold|italic"
+                android:focusable="true"
+                android:clickable="true"
+                android:gravity="top|start"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <!--Button1(Reset) -->
+              <Button
+                  android:id="@+id/notebook_resetButton_id"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:text="@string/notebook_reset_button"
+                  android:layout_alignParentLeft="true">
+              </Button>
+
+                <!--Button2(Submit) -->
+                <Button
+                    android:id="@+id/notebook_submitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/notebook_submit_button"
+                    android:layout_alignParentLeft="true">
+                </Button>
+
+                <!--Button3(Redirect) -->
+                <Button
+                    android:id="@+id/notebook_resetButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/redirect"
+                    android:layout_alignParentRight="true">
+                </Button>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
