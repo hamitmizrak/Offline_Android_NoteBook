@@ -17,6 +17,4 @@ public class Deneme {
         Deneme deneme= Deneme.builder().name("Hamit").surname("Mızrak").build();
         System.out.println(deneme);
     }
-
-
 }

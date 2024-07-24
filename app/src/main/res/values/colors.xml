@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Bootsrap5 Renk kodlari-->
+    <color name="hm_primary">#0d6efd</color>
+    <color name="hm_secondary">#6c757d</color>
+    <color name="hm_success">#198754</color>
+    <color name="hm_danger">#DC3545</color>
+    <color name="hm_warning">#FFC107</color>
+    <color name="hm_info">#0DCAF0</color>
+    <color name="hm_light">#F8F9FA</color>
+    <color name="hm_dark">#212529</color>
+    <color name="hm_muted">#6C757D</color>
+    <color name="hm_gray">#6C757D</color>
 </resources>
+
