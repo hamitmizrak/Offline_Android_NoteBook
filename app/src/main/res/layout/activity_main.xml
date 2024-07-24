@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:height="100dp"
         android:background="@color/black"
-        android:textColor="@color/hm_primary"
-        android:text="Merhabalar"/>
+        android:textColor="@color/hm_warning"
+        android:text="@string/welcome"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
