@@ -1,6 +1,27 @@
 # Android Uygulamasına Hoşgeldiniz
 [GitHub](https://github.com/hamitmizrak/Offline_Android_TodoList.git)
 ---
+## ADB  (Aşağıdaki Kodları proje dizinindeki terminalde yazıyorsunuz)
+```sh 
+adb: Android Debug Bridge
+adb kill-server
+adb start-server
+adb logcat
+```
+---
+
+
+## GRADLE (Aşağıdaki Kodları proje dizinindeki terminalde yazıyorsunuz)
+```sh 
+Build=> Clean Project
+Build=> Rebuild Project
+File => Invalidate Cache => Hepsini Siliyorsunuz
+Uygulamaya Git => Settings => Apps => Tech Android Uygulaması(APK) = Storage&Cache => Clear storage veya clear cache
+./gradlew clean    => Cache Temizliği.
+./gradlew assembleDebug => Projeyi tekrar çalıştır.
+```
+---
+
 
 ## Loglama
 ```sh
@@ -89,9 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 } //end MainActivity
 ```
----
-## Toast
-```sh 
+
 
 ```
 ---

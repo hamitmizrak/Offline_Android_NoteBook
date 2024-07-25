@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Toast
         //Toast.makeText(this, "Anasayfaya Hoşgeldiniz", Toast.LENGTH_SHORT).show();
         String welcome=getString(R.string.welcome);
-        Toast.makeText(this, welcome, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, welcome, Toast.LENGTH_SHORT).show();
 
         // ID
         buttonNotebookRedirect=findViewById(R.id.notebook_main_redirect_id);
@@ -58,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
                         // Yönlendirme
                         Intent notebookIntent= new Intent(getApplicationContext(),NotebookApp.class);
                         Toast.makeText(MainActivity.this, "NoteBook Sayfasına Yönlendirildi", Toast.LENGTH_SHORT).show();
+                        // Bir Activityden başka bir Activity'e veri göndermek
+                        String fullName="Hamit Mızrak";
+                        notebookIntent.putExtra("key_main",fullName);
+                        // Activity çalışsın
                         startActivity(notebookIntent);
                     }
                 });

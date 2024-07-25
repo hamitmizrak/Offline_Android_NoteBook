@@ -20,11 +20,10 @@
         android:theme="@style/Theme.TodoList"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <!-- Ana activity seçmek : MainActivity -->
-        <activity
             android:name=".NotebookApp"
+            android:exported="false" /> <!-- Ana activity seçmek : MainActivity -->
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

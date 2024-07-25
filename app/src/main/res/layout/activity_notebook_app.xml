@@ -24,6 +24,7 @@
 
             <!--Resim-->
             <ImageView
+                android:id="@+id/notebookImageViewId"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -44,7 +45,7 @@
 
             <!--EditText-->
             <EditText
-                android:id="@+id/notebook_editText_id"
+                android:id="@+id/notebookEditTextId"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
@@ -71,7 +72,7 @@
 
                 <!--Button1(Reset) -->
                 <Button
-                    android:id="@+id/notebook_resetButton_id"
+                    android:id="@+id/notebookResetButtonId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -88,10 +89,10 @@
 
                 <!--Button2(Submit) -->
                 <Button
-                    android:id="@+id/notebook_submitButton_id"
+                    android:id="@+id/notebookSubmitButtonId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/notebook_resetButton_id"
+                    android:layout_toEndOf="@+id/notebookResetButtonId"
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
@@ -104,10 +105,10 @@
 
                 <!--Button3(Redirect) -->
                 <Button
-                    android:id="@+id/notebook_resetButton"
+                    android:id="@+id/notebookRedirectButtonId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/notebook_submitButton_id"
+                    android:layout_toEndOf="@+id/notebookSubmitButtonId"
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
@@ -118,6 +119,21 @@
                     android:textAllCaps="false"
                     />
             </RelativeLayout>
+
+            <!--TextView-->
+            <TextView
+                android:id="@+id/notebookHandleTextViewId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Text Alanı"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textSize="19dp"
+                android:alpha="0.9"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/hm_warning"
+                />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

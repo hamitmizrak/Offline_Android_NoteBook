@@ -1,7 +1,9 @@
+/*plugin*/
 plugins {
     alias(libs.plugins.android.application)
 }
 
+/*Android*/
 android {
     namespace 'com.hamitmizrak.todolist'
     compileSdk 34
@@ -28,8 +30,8 @@ android {
     }
 }
 
+/*dependencies*/
 dependencies {
-
     /*Lombok*/
     compileOnly 'org.projectlombok:lombok:1.18.34'
     annotationProcessor 'org.projectlombok:lombok:1.18.34'
