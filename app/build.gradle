@@ -1,6 +1,8 @@
 /*plugin*/
 plugins {
-    alias(libs.plugins.android.application)
+    //alias(libs.plugins.android.application)
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 /*Android*/
@@ -32,6 +34,18 @@ android {
 
 /*dependencies*/
 dependencies {
+
+    /*Firebase*/
+    implementation platform('com.google.firebase:firebase-bom:33.1.2')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation libs.firebase.database
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+
+    /*measurement*/
+    implementation 'com.google.android.gms:play-services-measurement-impl:22.0.2'
+
     /*Lombok*/
     compileOnly 'org.projectlombok:lombok:1.18.34'
     annotationProcessor 'org.projectlombok:lombok:1.18.34'
@@ -44,3 +58,5 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 }
+/*GMS*/
+apply plugin: 'com.google.gms.google-services'
