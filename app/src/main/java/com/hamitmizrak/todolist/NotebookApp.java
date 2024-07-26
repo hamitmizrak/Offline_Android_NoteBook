@@ -76,21 +76,44 @@ public class NotebookApp extends AppCompatActivity {
         // SUBMIT DATABASE
         // SecretID
         //  --- username: "Hamit"
+        // DatabaseReference : Firebase veritabanından referans oluşturmak içindir.
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("todolist").child("message");
         Log.e("Database Key: ", databaseReference.getKey());
+
+        // Firebase Realtime Databasesden veri çekmek istediğimizde  ve verilerdeki herhangi bir değişiklik meydana geldiğinde dinlemek için kullanırız.
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            // onDataChange: Veritabanı dinleyicidir olarak kullanmaktayız. Bu metod veritabanında verilerle bir değişiklik söz konusuysa tetiklenir.
+            // DataSnapshot: Metodun parametresindeki olan bu verinin anlamı => Veritabanında belirli bir andaki verileri temsil eder.
+            // DataSnapshot: O andaki verileri içerir ve veritabanındaki verileri okumamıza olanak sağlar.
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    // KEY
-                    Log.e("KEY: ", snapshot.getKey());
-                    // VALUE
-                    Log.e("VALUE: ", snapshot.getValue().toString());
-            }
+                // exists(): Datasnapshoty'ın var olup olmadığını kontrol etmek için yazılır. Eğer veri yoksa veri işlemleri yapılmaz.
+                if(snapshot.exists()){
+                    // KEY: Veri anahtarı
+                    Log.i("KEY: ", snapshot.getKey());
+
+                    // VALUE: Veri değeri
+                    // Eğer Veri varsa
+                    if(snapshot.getValue()!=null){
+                        // VALUE
+                        Log.i("VALUE: ", snapshot.getValue().toString());
+                    }else{
+                        Log.e("VALUE: ","Vo value Found");
+                    }
+                }else{
+                    Log.e("VALUE: ","Snaphot does not exist");
+                }
+            } //end onDataChange
+
+            // onCancelled: Veri okuma işlemi iptal edildiğinde veya bir hata meydana geldiğinde tetiklenir.
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("Firebase Error: ",error.getDetails());
+                Log.e("Firebase Error: ",error.getMessage());
             }
         });
 
+        // Bu kod parçasında bir butona tıkladığımız zaman bir olay dinleyicidir.
         notebookSubmitButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
