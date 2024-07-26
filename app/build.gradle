@@ -10,6 +10,12 @@ android {
     namespace 'com.hamitmizrak.todolist'
     compileSdk 34
 
+    /*Türkçe karakter*/
+    compileOptions {
+       /* encoding = 'windows-1254'*/
+        encoding = 'UTF-8'
+    }
+
     defaultConfig {
         applicationId "com.hamitmizrak.todolist"
         minSdk 28
