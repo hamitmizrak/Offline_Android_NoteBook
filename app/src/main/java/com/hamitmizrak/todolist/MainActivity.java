@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 alertDialogNotebook.show();
             } // AlertDialog onClick
         }); //end Onclick buttonNotebookRedirect
-
     } //end onCreate
 
     // ONSTART(2)

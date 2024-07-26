@@ -204,5 +204,4 @@ public class NotebookApp extends AppCompatActivity {
 
     } //end onCreate
 
-
 } //end NotebookApp
