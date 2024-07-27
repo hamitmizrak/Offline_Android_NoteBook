@@ -1,7 +1,13 @@
 /*plugin*/
 plugins {
+    // Gradle versiyon kataloglarını kullanarak eklentileri eklemenin bir yoludur
     //alias(libs.plugins.android.application)
+
+    // Gradle dosyasında Android uygulaması için gerekli eklentileri belirtir.
+    // Bu komut projeye Android uygulama için gerekli modülleri derlemek ve çalıştırmak için gereken araçları ekler
     id 'com.android.application'
+
+    // Firebase Database
     id 'com.google.gms.google-services'
 }
 
@@ -65,4 +71,9 @@ dependencies {
 }
 
 /*GMS*/
+/*
+ Gradle yapılandırma dosyasına Google Hizmetlerini eklemektedir.
+ Bu eklendit Google API'lerine bağlamak için google-services.json
+ Genellikle Firebase vb. Google hizmetlerini kullanmak istediğimizde bu eklentiyi ekleriz
+*/
 apply plugin: 'com.google.gms.google-services'
