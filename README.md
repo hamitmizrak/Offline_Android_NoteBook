@@ -6,8 +6,6 @@
 [GitHub](https://github.com/hamitmizrak/Offline_Android_TodoList.git)
 ---
 
-
-
 [Firebase](https://console.firebase.google.com/project/todolist-44/overview)
 ---
 
