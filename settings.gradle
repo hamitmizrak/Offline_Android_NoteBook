@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TodoList"
+/* Proje ismini Değiştirdim*/
+rootProject.name = "NoteBook"
 include ':app'
